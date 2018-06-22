@@ -21,3 +21,5 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+## 描述
+空白模板的 ui demo   引入svg mock cube-ui vant-ui

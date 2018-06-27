@@ -11,6 +11,7 @@
       <cube-button @click="showDialog">show dialog</cube-button>
     <!-- 按钮
  <van-button size="large" style="position:absolute;bottom:0;left:5%;width:90%;">新增机构</van-button> -->
+        <img src="../assets/images/1.png" alt="">
     <!-- 查找列表 -->
     <van-cell-group>
       <van-cell v-if="item.provice&&item.clinicName&&items.length&&items.length>0" v-for="(item,index) in items" :label="item.area"
@@ -48,6 +49,7 @@ export default {
     };
   },
   mounted() {
+      console.log("count"+this.$store.state)
        mock().then(function(res){
            console.log(res.data)
        })

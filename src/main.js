@@ -16,6 +16,10 @@ Vue.component('icon', Icon);
 //引入mock
 import Mock from './mock';
 
+//引入vuex
+import store from './vuex'
+
+
 Vue.use(Cube)
 
 Vue.use(Vant);
@@ -23,6 +27,12 @@ Vue.use(Vant);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   render: h => h(App)
+});
+// 跳转的时候的函数
+router.beforeEach((to, from, next) => {
+    next()
+    console.log(to)
 });

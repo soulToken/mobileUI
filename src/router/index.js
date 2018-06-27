@@ -9,8 +9,14 @@ import Package2 from '@/components/Package2'
 
 Vue.use(Router)
 
+
 export default new Router({
   routes: [
+    {
+        name: '404',
+        path: '/404',
+        component: () => import('@/components/errorPage/noFound.vue')
+    },
     {
       path: '/',
       name: 'HelloWorld',
@@ -39,6 +45,10 @@ export default new Router({
         path: '/Package2',
         name: 'Package2',
         component: Package2
-      }
+      },
+      {
+        path: '*',    // 此处需特别注意至于最底部
+        redirect: '/404'
+      },
   ]
 })

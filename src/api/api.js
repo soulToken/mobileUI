@@ -7,7 +7,21 @@ import axios from 'axios';
 // let base="http://clinic.100care.cn"
 // let base="http://192.168.0.119:8080"
 let base="/apis"
-
+// 请求作统一处理
+axios.interceptors.response.use(function(response){
+    //对响应数据做些事
+    if(response.data&&response.data.resultCode&&response.data.resultCode=="1001"){
+        var type={
+            type:"toLogin"
+        }
+        console.log("toLogin------------------------------------------------------------")
+      document.location = "js://webview?"+JSON.stringify(type);
+    }
+    return response;
+  },function(error){
+    //请求错误时做些事
+    return Promise.reject(error);
+  });
 export const searchClient = params => { return axios.post(`${base}/100care_manage/manage/clinic/queryForApp`,  params); };
 
 export const changeMessage = params => { return axios.post(`${base}/100care_manage/homepage/clinic/updateForPhone`, params); };

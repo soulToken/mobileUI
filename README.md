@@ -6,6 +6,19 @@ src/theme.styl:    是自定义 主题色的代码
 
 一些相关的配置文件也都做了一些 修改
 
+## 配置
+修改打包路径为绝对路径，背景图片路径等等
+
+## 引入模块
+svg
+mock
+cube-ui
+vant-ui
+vuex
+vue-router (404页面)
+axios
+
+
 ## Build Setup
 
 ``` bash

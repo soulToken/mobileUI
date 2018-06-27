@@ -35,4 +35,5 @@ npm run build
 npm run build --report
 ```
 ## 描述
-空白模板的 ui demo   引入svg mock cube-ui vant-ui
+空白模板的 ui demo      引入svg mock cube-ui vant-ui
+git vscode 
